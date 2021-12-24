@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 1</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/><!--fontawesome-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" /><!--bootstrap-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!--bootstrap-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script><!--bootstrap-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" /><!--material icon-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/><!--swiper-->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script><!--swiper-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"/> 
+    
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-size: 100%;
+        font-family: sans-serif;
+      }
+      ::-webkit-scrollbar {
+        width: 2px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #888;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+      div,
+      header,
+      span,
+      section,
+      ul,
+      li,
+      a {
+        box-sizing: border-box;
+      }
+
+      header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 250px;
+        align-items: center;
+        /* position: fixed; */
+      }
+      .menu li {
+        list-style: none;
+        display: inline-block;
+        margin: 20px;
+        /* color: #000; */
+      }
+      .menu li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 15px;
+      }
+      section {
+        width: 100%;
+        height: 100vh;
+        float: left;
+      }
+      #home {
+        background: url("https://img.freepik.com/free-vector/dark-low-poly-background_1048-7971.jpg?size=626&ext=jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+      }
+      .heading_link {
+        text-decoration: none;
+        color: #fff;
+      }
+      .text {
+        font-size: 30px;
+        font-weight: bold;
+      }
+      .para {
+        padding: 80px 250px;
+      }
+      .paratitle {
+        font-size: 40px;
+        font-weight: bold;
+        color: #fff;
+      }
+      .body {
+        margin-top: 20px;
+        font-size: 20px;
+        width: 40%;
+        color: #fff;
+      }
+      .buttons {
+        margin-top: 20px;
+        width: 250px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .btn1 {
+        height: 30px;
+        width: 80px;
+      }
+      .btn2 {
+        height: 30px;
+        width: 80px;
+      }
+      .bn29 {
+        border: none;
+        padding: 0.8em 2.5em;
+        outline: none;
+        color: white;
+        font-style: 1.2em;
+        position: relative;
+        z-index: 1;
+        cursor: pointer;
+        background: none;
+        text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.45);
+      }
+
+      .bn29:before,
+      .bn29:after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border-radius: 10em;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        width: 105%;
+        height: 105%;
+        content: "";
+        z-index: -2;
+        background-size: 400% 400%;
+        background: linear-gradient(
+          60deg,
+          #f79533,
+          #f37055,
+          #ef4e7b,
+          #a166ab,
+          #5073b8,
+          #1098ad,
+          #07b39b,
+          #6fba82
+        );
+      }
+
+      .bn29:before {
+        -webkit-filter: blur(7px);
+        filter: blur(7px);
+        -webkit-transition: all 0.25s ease;
+        transition: all 0.25s ease;
+        -webkit-animation: pulse 10s infinite ease;
+        animation: pulse 10s infinite ease;
+      }
+
+      .bn29:after {
+        -webkit-filter: blur(0.3px);
+        filter: blur(0.3px);
+      }
+
+      .bn29:hover:before {
+        width: 115%;
+        height: 115%;
+      }
+
+      #welcome {
+        background-color: lavender;
+        height: 100%;
+      }
+      .p_heading {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+      }
+      .p_title {
+        font-size: 30px;
+        font-weight: bold;
+      }
+      .p_body {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        padding: 20px 250px;
+        /* justify-content: center;
+        align-items: center; */
+      }
+      .summary {
+        width: 75%;
+      }
+      .p_text {
+        font-size: 20px;
+        width: 60%;
+      }
+      .image {
+      }
+      .umbrella {
+        height: 120px;
+        width: 140px;
+        opacity: 0.6;
+      }
+      .cards {
+        padding: 20px 250px;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 40px;
+      }
+      .card {
+        -webkit-box-shadow: 10px 10px 21px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 10px 10px 21px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 10px 10px 21px 0px rgba(0, 0, 0, 0.75);
+        width: 200px;
+        /* height: 150px; */
+        border: 1px solid grey;
+        background-color: white;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* margin-left: 40px; */
+      }
+      .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .c_title {
+        text-align: center;
+      }
+      .c_title_text {
+        margin-top: 10px;
+        font-size: 20px;
+      }
+      .c_info {
+        text-align: center;
+      }
+      .c_info_text {
+        font-size: 15px;
+        opacity: 0.7;
+      }
+      .c_button {
+        margin-top: 10px;
+      }
+      .card_button {
+        height: 30px;
+        width: 80px;
+      }
+      #projects {
+        background-color: #0e2c40;
+      }
+      .pro_heading {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+      }
+      .pro_heading_text {
+        font-size: 40px;
+        font-weight: bold;
+        color: white;
+      }
+      .project_cards {
+        padding: 50px 250px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+      }
+      .pro_card {
+        width: 200px;
+        /* height: 150px; */
+        border: 1px solid grey;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: lightgrey;
+      }
+      .pro_card:hover {
+        cursor: pointer;
+        transform: scale(1.5);
+      }
+      .pro_image {
+        /* height: ; */
+      }
+      .pro_img {
+        width: 200px;
+        height: 30vh;
+        border: 1px solid black;
+      }
+      .pro_title {
+        margin-top: 20px;
+        /* text-align: left; */
+      }
+      .pro_title_text {
+        font-size: 15px;
+        font-weight: bold;
+      }
+      .pro_para {
+        padding: 10px;
+      }
+      .pro_para_text {
+        font-size: 10px;
+        opacity: 0.7;
+      }
+      .pro_button {
+        padding-bottom: 15px;
+      }
+      .pr_button {
+        padding: 10px;
+        font-weight: bold;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        background-color: #07b39b;
+      }
+      #pricing {
+        background-color: white;
+        height: 100%;
+      }
+      .pricing_table {
+        margin-top: 50px;
+      }
+      .pricing_heading {
+        justify-content: center;
+        display: flex;
+        /* align-items: center; */
+      }
+      .pricing_head_text {
+        font-size: 30px;
+        font-weight: bold;
+      }
+      .pricing_cards {
+        padding: 5px 250px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+      .price_c {
+        width: 200px;
+        /* border: 2px solid black; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .price_heading {
+        margin-top: 20px;
+      }
+      .price_c_heading {
+        font-size: 25px;
+        font-weight: bold;
+      }
+      .c_substcription {
+      }
+      .price_sub_text {
+        font-size: 20px;
+        opacity: 0.7;
+        font-weight: bold;
+      }
+      .price_list {
+      }
+      .pricing_list_content {
+        list-style-type: none;
+      }
+      .pricing_items {
+        font-size: 10px;
+        font-weight: bold;
+        text-align: center;
+    }
+      .pricing_button {
+        padding: 10px;
+        /* width: 0px; */
+      }
+      .pricing_btn {
+        width: 70px;
+        padding: 5px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        background-color: #07b39b;
+        color: white;
+      }
+      .division {
+        font-size: 200px;
+        opacity: 0.7;
+      }
+      #video_projects {
+        background-color: #5cdb95;
+      }
+      .swiper-slide {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #team {
+        background-color: #c5cbe3;
+      }
+      .team_heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+      }
+      .heading_text {
+        font-size: 30px;
+        font-weight: bold;
+      }
+      .member:hover {
+        transform: scale(1.5);
+      }
+      .img-circle {
+        width: 150px;
+        height: 150px;
+      }
+      .first {
+        display: flex;
+        flex-direction: row;
+        padding: 20px 250px;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+      .second {
+        display: flex;
+        flex-direction: row;
+        padding: 20px 250px;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+      .m_details {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 10px;
+      }
+      .m_name {
+        font-size: 15px;
+        font-weight: bold;
+      }
+      .m_post {
+        font-size: 10px;
+        font-weight: bold;
+        opacity: 0.7;
+      }
+      #life {
+        background-color: #0e2c40;
+        /* height: 50%; */
+      }
+      .life_heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+      }
+      .life_heading_text {
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+      }
+      .twoinone_slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .twoinone_slide img {
+        display: block;
+        width: 50%;
+        height: 50%;
+        object-fit: cover;
+      }
+
+      body {
+        background: #000;
+        color: #000;
+      }
+
+      /* .swiper {
+        width: 50%;
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+      } */
+
+      .twoinone_slide {
+        background-size: cover;
+        background-position: center;
+      }
+
+      .mySwiper4 {
+        height: 60%;
+        width: 80%;
+      }
+
+      .mySwiper3 {
+        height: 20%;
+        box-sizing: border-box;
+        padding: 10px 0;
+        width: 50%;
+      }
+
+      .mySwiper3 .twoinone_slide {
+        width: 25%;
+        height: 100%;
+        opacity: 0.4;
+      }
+
+      .mySwiper3 .swiper-slide-thumb-active {
+        opacity: 1;
+      }
+
+      .twoinone_slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      #signup {
+        background-image: url("https://images.unsplash.com/photo-1486927181919-3ac1fc3a8082?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fHBhdHRlcnN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .signup_heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+      }
+      .sign_heading_title {
+        font-size: 30px;
+        font-weight: bold;
+      }
+      .inputbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 50px;
+      }
+      .signup_input {
+        font-size: 20px;
+        border: none;
+        outline: none;
+        padding: 5px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        width: 40%;
+        /* background-color: rgb(150, 105, 105); */
+        /* color: #8EE4AF; */
+        height: 50px;
+      }
+      .signup_button {
+        font-size: 20px;
+        border: none;
+        outline: none;
+        background-color: purple;
+        color: white;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        padding: 5px;
+        width: 150px;
+        height: 50px;
+      }
+      #blog {
+        background-color: #efd7cc;
+        height: 100%;
+      }
+      .blog_heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+      }
+      .block_heading_text {
+        font-size: 30px;
+        font-weight: bold;
+      }
+      .blog_cards {
+        padding: 20px 250px;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+      }
+      .blog_card {
+        -webkit-box-shadow: 10px 10px 21px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 10px 10px 21px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 10px 10px 21px 0px rgba(0, 0, 0, 0.75);
+        width: 250px;
+        border: 1px solid grey;
+        background-color: white;
+        padding: 20px;
+        padding-top: 0 !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+      }
+      .blog_image {
+      }
+      .blog_img {
+        width: 250px;
+      }
+      .blog_title {
+        margin-top: 10px;
+      }
+      .blog_title_text {
+        font-size: 15px;
+        font-weight: bold;
+      }
+      .blog_subtitle {
+        /* margin-top: 10px; */
+      }
+      .blog_date_text {
+        font-size: 10px;
+        font-weight: bold;
+        opacity: 0.7;
+      }
+      .blog_para {
+      }
+      .blog_para_text {
+        font-size: 10px;
+      }
+      .blog_button {
+        margin-top: 10px;
+      }
+      .blog_btn {
+        padding: 5px;
+        font-size: 10px;
+        background-color: rgb(146, 99, 223);
+        color: white;
+        outline: none;
+        border: none;
+      }
+      #contact {
+        background-color: #88eee0;
+        height: 100%;
+        display: flex;
+        /* flex-direction: row; */
+        justify-content: center;
+        align-items: center;
+      }
+      .main_div {
+        background-color: #0e2c40;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      .left {
+        width: 50%;
+        background-color: aqua;
+        height: 550px;
+        padding: 0;
+      }
+      .right {
+        width: 50%;
+        background-color: #ffe26d;
+        height: 550px;
+      }
+      .map {
+        width: 100%;
+        height: 550px;
+      }
+      .info_heading {
+        margin: 20px;
+      }
+      .contact_text {
+        font-size: 30px;
+        font-weight: bold;
+      }
+      .info {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+      }
+      .name {
+        margin-bottom: 10px;
+        width: 50%;
+        height: 30px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        padding: 10px;
+      }
+      .email {
+        margin-bottom: 10px;
+        width: 50%;
+        height: 30px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        padding: 10px;
+      }
+      .subject {
+        margin-bottom: 10px;
+        width: 50%;
+        height: 30px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        padding: 10px;
+      }
+      .message {
+        margin-bottom: 10px;
+        width: 50%;
+        /* height: 30px; */
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        padding: 20px;
+      }
+      .lable_class {
+        font-size: 12px;
+      }
+      .input_button {
+        background-color: #5073b8;
+        color: white;
+        border: none;
+        outline: none;
+        padding: 10px;
+        width: 50%;
+        border-radius: 10px;
+        font-size: 15px;
+      }
+      #footer {
+        background-color: white;
+        height: 100%;
+      }
+      .footer_cards {
+        padding: 20px 250px;
+        display: flex;
+        justify-content: space-between;
+        /* align-items: center; */
+        flex-direction: row;
+        margin-top: 30px;
+      }
+      .footer_card {
+        /* border: 2px solid black; */
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .footer_title {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+      }
+      .footer_body {
+        margin-top: 10px;
+        font-size: 15px;
+        font-weight: bold;
+        opacity: 0.7;
+        text-align: center;
+      }
+      .f_list {
+        list-style-type: none;
+      }
+      .iconss {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <section id="home">
+      <header>
+        <a href="#" class="heading_link"><p class="text">ZIPPY</p></a>
+        <ul class="menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </header>
+
+      <div class="para">
+        <div class="heading">
+          <p class="paratitle">
+            One page promising to <br />
+            fill all your needs!
+          </p>
+        </div>
+        <div class="body">
+          <p>
+            It is a long established fact that a reader will be distracted by
+            the readable.
+          </p>
+        </div>
+
+        <div class="buttons">
+          <button class="bn29">Learn More</button>
+          <button class="bn29">Learn More</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="welcome">
+      <div class="p_heading">
+        <p class="p_title">Welcome to Zippy</p>
+      </div>
+      <div class="p_body">
+        <div class="summary">
+          <p class="p_text">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+          </p>
+        </div>
+        <div class="image">
+          <img
+            src="https://i.ibb.co/WnMjMjD/line-icon-for-umbrella-vector-removebg-preview.png"
+            alt=""
+            class="umbrella"
+          />
+        </div>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="logo">
+            <span class="material-icons">notifications</span>
+          </div>
+          <div class="c_title"><p class="c_title_text">Lorem Ipsum</p></div>
+          <div class="c_info">
+            <p class="c_info_text">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s
+            </p>
+          </div>
+          <div class="c_button">
+            <button class="btn-success card_button">Learn More</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="logo">
+            <span class="material-icons">email</span>
+          </div>
+          <div class="c_title"><p class="c_title_text">Lorem Ipsum</p></div>
+          <div class="c_info">
+            <p class="c_info_text">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s
+            </p>
+          </div>
+          <div class="c_button">
+            <button class="btn-success card_button">Learn More</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="logo">
+            <span class="material-icons">view_list</span>
+          </div>
+          <div class="c_title"><p class="c_title_text">Lorem Ipsum</p></div>
+          <div class="c_info">
+            <p class="c_info_text">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s
+            </p>
+          </div>
+          <div class="c_button">
+            <button class="btn-success card_button">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="pro_heading">
+        <p class="pro_heading_text">Projects</p>
+      </div>
+
+      <div class="swiper mySwiper1">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="pro_card">
+              <div class="pro_image">
+                <img
+                  src="https://media.istockphoto.com/photos/document-management-system-being-setup-by-it-consultant-working-on-picture-id1291478674?b=1&k=20&m=1291478674&s=170667a&w=0&h=uL2_4Aypci7qRRBW8kCxrQd1hcraDtz7r3yMFElm9Uw="
+                  alt=""
+                  class="pro_img"
+                />
+              </div>
+              <div class="pro_title">
+                <p class="pro_title_text">PROJECT NAME</p>
+              </div>
+              <div class="pro_para">
+                <p class="pro_para_text">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book.
+                </p>
+              </div>
+              <div class="pro_button">
+                <button class="pr_button">Launch Case Study</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pro_card">
+              <div class="pro_image">
+                <img
+                  src="https://images.unsplash.com/photo-1542626991-cbc4e32524cc?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvamVjdHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                  alt=""
+                  class="pro_img"
+                />
+              </div>
+              <div class="pro_title">
+                <p class="pro_title_text">PROJECT NAME</p>
+              </div>
+              <div class="pro_para">
+                <p class="pro_para_text">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book.
+                </p>
+              </div>
+              <div class="pro_button">
+                <button class="pr_button">Launch Case Study</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pro_card">
+              <div class="pro_image">
+                <img
+                  src="https://media.istockphoto.com/photos/businesswoman-examining-documents-at-desk-picture-id515444656?b=1&k=20&m=515444656&s=170667a&w=0&h=VjpftDZaOIv_AG20mjDjvtXzj3_3htvo76C5CrbxzxQ="
+                  alt=""
+                  class="pro_img"
+                />
+              </div>
+              <div class="pro_title">
+                <p class="pro_title_text">PROJECT NAME</p>
+              </div>
+              <div class="pro_para">
+                <p class="pro_para_text">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book.
+                </p>
+              </div>
+              <div class="pro_button">
+                <button class="pr_button">Launch Case Study</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pro_card">
+              <div class="pro_image">
+                <img
+                  src="https://images.unsplash.com/photo-1620325867502-221cfb5faa5f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cHJvamVjdHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                  alt=""
+                  class="pro_img"
+                />
+              </div>
+              <div class="pro_title">
+                <p class="pro_title_text">PROJECT NAME</p>
+              </div>
+              <div class="pro_para">
+                <p class="pro_para_text">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book.
+                </p>
+              </div>
+              <div class="pro_button">
+                <button class="pr_button">Launch Case Study</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pro_card">
+              <div class="pro_image">
+                <img
+                  src="https://images.unsplash.com/photo-1608303588026-884930af2559?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHByb2plY3R8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                  alt=""
+                  class="pro_img"
+                />
+              </div>
+              <div class="pro_title">
+                <p class="pro_title_text">PROJECT NAME</p>
+              </div>
+              <div class="pro_para">
+                <p class="pro_para_text">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book.
+                </p>
+              </div>
+              <div class="pro_button">
+                <button class="pr_button">Launch Case Study</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pro_card">
+              <div class="pro_image">
+                <img
+                  src="https://images.unsplash.com/flagged/photo-1558963675-94dc9c4a66a9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHByb2plY3R8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                  alt=""
+                  class="pro_img"
+                />
+              </div>
+              <div class="pro_title">
+                <p class="pro_title_text">PROJECT NAME</p>
+              </div>
+              <div class="pro_para">
+                <p class="pro_para_text">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book.
+                </p>
+              </div>
+              <div class="pro_button">
+                <button class="pr_button">Launch Case Study</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <section id="video_projects">
+      <div class="pro_heading">
+        <p class="pro_heading_text">Video Projects</p>
+      </div>
+
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <iframe
+              width="80%"
+              height="500"
+              src="https://www.youtube.com/embed/qz0aGYrrlhU"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="swiper-slide">
+            <iframe
+              width="80%"
+              height="500"
+              src="https://www.youtube.com/embed/W6NZfCO5SIk"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="swiper-slide">
+            <iframe
+              width="80%"
+              height="500"
+              src="https://www.youtube.com/embed/1PnVor36_40"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="swiper-slide">
+            <iframe
+              width="80%"
+              height="500"
+              src="https://www.youtube.com/embed/eow125xV5-c"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+
+    <section id="pricing">
+      <div class="pricing_table">
+        <div class="pricing_heading">
+          <p class="pricing_head_text">Pricing Table</p>
+        </div>
+      </div>
+      <div class="pricing_cards">
+        <div class="price_c">
+          <div class="price_heading">
+            <p class="price_c_heading">Standard Plan</p>
+          </div>
+          <div class="c_substcription">
+            <p class="price_sub_text">Free</p>
+          </div>
+          <div class="price_list">
+            <ul class="pricing_list_content">
+              <li class="pricing_items">2Gb available</li>
+              <li class="pricing_items">15 new contacts</li>
+              <li class="pricing_items">Outgoing ads</li>
+            </ul>
+          </div>
+          <div class="pricing_button">
+            <button class="pricing_btn">BUY</button>
+          </div>
+        </div>
+        <p class="division">|</p>
+        <div class="price_c">
+          <div class="price_heading">
+            <p class="price_c_heading">Business Plan</p>
+          </div>
+          <div class="c_substcription">
+            <p class="price_sub_text">200/month</p>
+          </div>
+          <div class="price_list">
+            <ul class="pricing_list_content">
+              <li class="pricing_items">10Gb available</li>
+              <li class="pricing_items">30 new contacts</li>
+              <li class="pricing_items">No ads</li>
+            </ul>
+          </div>
+          <div class="pricing_button">
+            <button class="pricing_btn">BUY</button>
+          </div>
+        </div>
+        <p class="division">|</p>
+        <div class="price_c">
+          <div class="price_heading">
+            <p class="price_c_heading">Premium Plan</p>
+          </div>
+          <div class="c_substcription">
+            <p class="price_sub_text">400/month</p>
+          </div>
+          <div class="price_list">
+            <ul class="pricing_list_content">
+              <li class="pricing_items">100Gb available</li>
+              <li class="pricing_items">unlimited contacts</li>
+              <li class="pricing_items">no ads</li>
+            </ul>
+          </div>
+          <div class="pricing_button">
+            <button class="pricing_btn">BUY</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="team">
+      <div class="team_heading">
+        <p class="heading_text">ZIPPY TEAM</p>
+      </div>
+
+      <div class="first">
+        <div class="member">
+          <img
+            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            class="img-circle"
+            alt=""
+          />
+          <div class="m_details">
+            <p class="m_name">Member Name</p>
+            <p class="m_post">Member Post</p>
+          </div>
+        </div>
+        <div class="member">
+          <img
+            src="https://images.unsplash.com/photo-1537511446984-935f663eb1f4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHBlb3BsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            class="img-circle"
+            alt=""
+          />
+          <div class="m_details">
+            <p class="m_name">Member Name</p>
+            <p class="m_post">Member Post</p>
+          </div>
+        </div>
+        <div class="member">
+          <img
+            src="https://media.istockphoto.com/photos/portrait-of-a-happy-asian-businesswoman-picture-id1303501167?b=1&k=20&m=1303501167&s=170667a&w=0&h=DK8ceOcn2hfAdq9wz9brnaDMPH-jox1afc-YjoCLO-g="
+            class="img-circle"
+            alt=""
+          />
+          <div class="m_details">
+            <p class="m_name">Member Name</p>
+            <p class="m_post">Member Post</p>
+          </div>
+        </div>
+      </div>
+      <div class="second">
+        <div class="member">
+          <img
+            src="https://media.istockphoto.com/photos/asian-chinese-beautiful-woman-looking-at-camera-videocall-smiling-picture-id1297962358?b=1&k=20&m=1297962358&s=170667a&w=0&h=q5oQIXvqhyLiVLzOWLsdzKo7WxHTMyY6bw1lDwz31P8="
+            class="img-circle"
+            alt=""
+          />
+          <div class="m_details">
+            <p class="m_name">Member Name</p>
+            <p class="m_post">Member Post</p>
+          </div>
+        </div>
+        <div class="member">
+          <img
+            src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGludGVydmlldyUyMHBlb3BsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            class="img-circle"
+            alt=""
+          />
+          <div class="m_details">
+            <p class="m_name">Member Name</p>
+            <p class="m_post">Member Post</p>
+          </div>
+        </div>
+        <div class="member">
+          <img
+            src="https://media.istockphoto.com/photos/portrait-young-confident-smart-asian-businessman-look-at-camera-and-picture-id1288538088?b=1&k=20&m=1288538088&s=170667a&w=0&h=3efMku7kSXUhpVrErAVVgxp6G91tRZ_5seygOn68RnE="
+            class="img-circle"
+            alt=""
+          />
+          <div class="m_details">
+            <p class="m_name">Member Name</p>
+            <p class="m_post">Member Post</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="life">
+      <div class="life_heading">
+        <p class="life_heading_text">Life in ZIPPY</p>
+      </div>
+
+      <div
+        style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+        class="swiper mySwiper4"
+      >
+        <div class="swiper-wrapper twoinone_wrapper">
+          <div class="swiper-slide twoinone_slide">
+            <img
+              src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dGVhbXdvcmt8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            />
+          </div>
+          <div class="swiper-slide twoinone_slide">
+            <img
+              src="https://images.unsplash.com/photo-1576267423048-15c0040fec78?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHRlYW13b3JrfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            />
+          </div>
+          <div class="swiper-slide twoinone_slide">
+            <img
+              src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHRlYW13b3JrfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            />
+          </div>
+          <div class="swiper-slide twoinone_slide">
+            <img
+              src="https://images.unsplash.com/photo-1590402494587-44b71d7772f6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fHRlYW13b3JrfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            />
+          </div>
+          <div class="swiper-slide twoinone_slide">
+            <img
+              src="https://images.unsplash.com/photo-1622675363311-3e1904dc1885?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDJ8fHRlYW13b3JrfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            />
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+      <div thumbsSlider="" class="swiper mySwiper3">
+        <div class="swiper-wrapper twoinone_wrapper">
+          <div class="swiper-slide twoinone_slide">
+            <img
+              src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dGVhbXdvcmt8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            />
+          </div>
+          <div class="swiper-slide twoinone_slide">
+            <img
+              src="https://images.unsplash.com/photo-1576267423048-15c0040fec78?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHRlYW13b3JrfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            />
+          </div>
+          <div class="swiper-slide twoinone_slide">
+            <img
+              src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHRlYW13b3JrfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            />
+          </div>
+          <div class="swiper-slide twoinone_slide">
+            <img
+              src="https://images.unsplash.com/photo-1590402494587-44b71d7772f6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fHRlYW13b3JrfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            />
+          </div>
+          <div class="swiper-slide twoinone_slide">
+            <img
+              src="https://images.unsplash.com/photo-1622675363311-3e1904dc1885?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDJ8fHRlYW13b3JrfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="signup">
+      <div class="signup_heading">
+        <p class="sign_heading_title">Newsletter Signup</p>
+      </div>
+      <div class="inputbar">
+        <input
+          type="text"
+          name=""
+          class="signup_input"
+          id=""
+          placeholder="abc@gmail.com"
+        />
+        <button class="signup_button">Signup</button>
+      </div>
+    </section>
+
+    <section id="blog">
+      <div class="blog_heading">
+        <p class="block_heading_text">Blog</p>
+      </div>
+      <div class="blog_cards">
+        <div class="blog_card">
+          <div class="blog_image">
+            <img
+              class="blog_img"
+              src="https://images.unsplash.com/photo-1432821596592-e2c18b78144f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmxvZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+              alt=""
+            />
+          </div>
+          <div class="blog_title">
+            <p class="blog_title_text">Blog Title</p>
+          </div>
+          <div class="blog_subtitle">
+            <p class="blog_date_text">30 October 2021</p>
+          </div>
+          <div class="blog_para">
+            <p class="blog_para_text">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially unchanged.
+            </p>
+          </div>
+          <div class="blog_button">
+            <button class="blog_btn">READ MORE</button>
+          </div>
+        </div>
+        <div class="blog_card">
+          <div class="blog_image">
+            <img
+              class="blog_img"
+              src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmxvZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+              alt=""
+            />
+          </div>
+          <div class="blog_title">
+            <p class="blog_title_text">Blog Title</p>
+          </div>
+          <div class="blog_subtitle">
+            <p class="blog_date_text">30 October 2021</p>
+          </div>
+          <div class="blog_para">
+            <p class="blog_para_text">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially unchanged.
+            </p>
+          </div>
+          <div class="blog_button">
+            <button class="blog_btn">READ MORE</button>
+          </div>
+        </div>
+        <div class="blog_card">
+          <div class="blog_image">
+            <img
+              class="blog_img"
+              src="https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGJsb2d8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+              alt=""
+            />
+          </div>
+          <div class="blog_title">
+            <p class="blog_title_text">Blog Title</p>
+          </div>
+          <div class="blog_subtitle">
+            <p class="blog_date_text">30 October 2021</p>
+          </div>
+          <div class="blog_para">
+            <p class="blog_para_text">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially unchanged.
+            </p>
+          </div>
+          <div class="blog_button">
+            <button class="blog_btn">READ MORE</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="main_div">
+        <div class="left">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30711080.820512634!2d64.44765887656375!3d20.012239940397077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1635615824951!5m2!1sen!2sin"
+            allowfullscreen=""
+            loading="lazy"
+            class="map"
+          ></iframe>
+        </div>
+
+        <div class="right">
+          <div class="info_heading">
+            <p class="contact_text">Contact</p>
+          </div>
+          <div class="info">
+            <label for="name" class="lable_class">Name</label>
+            <input type="text" name="name" class="name" />
+            <label for="email" class="lable_class">Email</label>
+            <input type="email" name="email" class="email" />
+            <label for="subject" class="lable_class">Subject</label>
+            <input type="text" name="subject" class="subject" />
+            <label for="message" class="lable_class">Message</label>
+            <textarea
+              name="message"
+              id=""
+              class="message"
+              cols="30"
+              rows="10"
+            ></textarea>
+            <button class="input_button">Submit</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="footer">
+      <div class="footer_cards">
+        <div class="footer_card">
+          <div class="footer_title">OFFICE ADDRESS</div>
+          <div class="footer_body">
+            <ul>
+              <li class="f_list">Lorem Ipsum state, 234</li>
+              <li class="f_list">1200 Contruction</li>
+              <li class="f_list">Amsterdam</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer_card">
+          <div class="footer_title">FOLLOW US</div>
+          <div class="footer_body">
+            <div class="iconss">
+              <div class="first_icons">
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-linkedin"></i></a>
+                <a href=""><i class="fab fa-google"></i></a>
+              </div>
+              <div class="second_icons">
+                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href=""><i class="fab fa-facebook"></i></a>
+                <a href=""><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer_card">
+          <div class="footer_title">CONTACT US</div>
+          <div class="footer_body">
+            <ul>
+              <li class="f_list">+123 4567 782</li>
+              <li class="f_list">zippy@gmail.com</li>
+              <li class="f_list">enquiry@zippy.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      var swiper = new Swiper(".mySwiper1", {
+        slidesPerView: 5,
+        spaceBetween: 30,
+        freeMode: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+
+      var swiper = new Swiper(".mySwiper3", {
+        loop: true,
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      var swiper2 = new Swiper(".mySwiper4", {
+        loop: true,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+          swiper: swiper,
+        },
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,209 @@
+.centered {
+  background-image: url("https://us.123rf.com/450wm/tirachard/tirachard1802/tirachard180200064/95656773-creative-flat-lay-photo-of-workspace-desk-top-view-office-desk-with-laptop-blank-empty-notebooks-and.jpg?ver=6");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.index_cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 40px 100px;
+  overflow: hidden;
+}
+.index_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 200px;
+  height: 140px;
+  margin: 20px;
+  padding: 10px;
+  backdrop-filter: blur(18px) saturate(158%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(158%) !important;
+  background-color: rgba(17, 25, 40, 0.18) !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(255, 255, 255, 0.125) !important;
+  color: white;
+  -webkit-animation: fadein 3s;
+  cursor: pointer;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.logo {
+  font-size: 30px;
+}
+.card {
+  padding: 20px;
+  width: 25rem;
+  backdrop-filter: blur(18px) saturate(158%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(158%) !important;
+  background-color: rgba(17, 25, 40, 0.18) !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(255, 255, 255, 0.125) !important;
+  color: white;
+}
+.card-title {
+  text-align: center;
+  font-size: 30px;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  background-color: rgb(59, 59, 241) !important;
+  color: white !important;
+  padding: 5px;
+}
+.link {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.info {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.img {
+  border-radius: 50% !important;
+}
+.home {
+}
+.nav {
+  margin-top: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.display {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  height: 580px;
+}
+.left {
+  width: 20%;
+  /* background-color: white; */
+  padding: 20px;
+  display: flex;
+  /* align-items: center; */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border-radius: 10px;
+}
+.list {
+  list-style-type: none !important;
+  margin-top: 30px;
+}
+.right {
+  width: 80%;
+  background-color: #e6ebf8;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.a_list {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+.report_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+td {
+  border: 5px solid white;
+  padding: 15px;
+}
+
+thead {
+  font-weight: bold;
+  text-align: center;
+  background: #625d5d;
+  color: white;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+/* .footer {
+  text-align:right;
+  font-weight:bold;
+} */
+
+tbody > tr:nth-child(odd) {
+  background: #d1d0ce;
+}
+tbody > tr:nth-child(even) {
+  background: #dbab4a;
+}
+
+/* subjects */
+
+.sybject_card {
+  margin-top: 20px;
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 5px -13px;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  align-items: center;
+}
+.sub_name {
+  font-size: 20px;
+  margin-top: 10px;
+}
+.sub_marks {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+/* subjects end */
+
+/* dashboard */
+
+.blockquote-custom {
+  position: relative;
+  font-size: 1.1rem;
+}
+
+.blockquote-custom-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -25px;
+  left: 50px;
+}
+
+/* dashboard ends */
+
+.student_class{
+  background-color: red;
+}
